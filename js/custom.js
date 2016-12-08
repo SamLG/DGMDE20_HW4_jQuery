@@ -8,12 +8,12 @@
 $(document).ready(function(){
 
     $('main').bind('swipeleft', function(event){
-        location.hash = "#" + home;
+        location.hash = "home";
 		// $('#kitteh').removeClass().addClass('one');
 	}); //end swipe left
 
 	$('main').bind('swiperight', function(event){
-        location.hash = "#" + sitesPage;
+        location.hash = "sitesPage";
 		// $('#kitteh').removeClass().addClass('two');
 	}); //end swipe right
 
