@@ -7,25 +7,46 @@
 **/
 $(document).ready(function(){
 
-    // http://demos.jquerymobile.com/1.3.2/examples/swipe/swipe-page.html
-    $( document ).on( "swipeleft", page, function() {
-        $.mobile.changePage( "http://vermont.samgrise.me/#home", { transition: "slide" });
-    }); //end swipe left
+    $('main').bind('swipeleft', function(event){
+		// $('main').addClass('red');
+        /* Useful sources for creating below functionality
+           https://api.jquerymobile.com/pagecontainer/#method-change
+           http://stackoverflow.com/questions/23852890/jquery-mobile-swipe-to-navigate-as-single-page-style */
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#sitesPage", {
+                transition: "slide",
+            });
+	}); //end swipe left
 
-    $( document ).on( "swiperight", page, function() {
-            $.mobile.changePage( "http://vermont.samgrise.me/#sitesPage", { transition: "slide" });
-    }); //end swipe right
+	$('main').bind('swiperight', function(event){
+		// $('main').removeClass('red');
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#home", {
+                transition: "slide",
+                reverse: true
+            });
+	});
 
-	// $('main').bind('taphold', function(event){
+    // $('main').bind('taphold', function(event){
 	// 	$('#kitteh').removeClass().addClass('lots');
 	// }); //end taphold
     //
-	// $(window).on('orientationchange', function(){
-	// 	if(window.orientation == 0) {
-	// 		$('#kitteh').removeClass().addClass('puppy');
-	// 	} else {
-	// 		$('#kitteh').removeClass().addClass('three');
-	// 	}
+    $(window).on('orientationchange', function(){
+		if(window.orientation == 0) {
+            // i < 100 gets the bean off the screen
+            for (i=0; i < 100; i++){
+                $('h1').append('<img src="images/coffee-bean.png" alt="coffee bean">');
+                var pos = Math.round(Math.random()*40);
+                var fallPos = '+='.concat(String(pos)).concat('px');
+                $('header img').attr("top", 0).attr("left", fallPos);
+
+                $('header img').animate({
+                        bottom: "700px",
+                    }, 100, function() {
+                    // Animation complete
+                });
+            }
+		} else {
+			// $('#kitteh').removeClass().addClass('three');
+		}
 	}); //end orientationchange
 
     //check that all requried fields validate before submission and display error if necessary

@@ -18,7 +18,7 @@
     </head>
     <body>
         <!-- - attributes are defined by programmer-->
-        <section data-role="page" id="home" data-theme="a">
+        <section data-role="page" id="home" data-theme="a" data-prev="" data-next="#sitesPage">
             <header data-role="header" data-position="fixed">
                 <a href="#content" class="sr-only">skip to content</a>
                 <h1>Vermont</h1>
@@ -51,7 +51,7 @@
             </footer>
         </section>
 
-        <section data-role="page" id="sitesPage" data-theme="a">
+        <section data-role="page" id="sitesPage" data-theme="a" data-prev="#home" data-next="">
                <header data-role="header" data-position="fixed">
                    <a href="#content2" class="sr-only">skip to content</a>
                    <h1>Vermont</h1>
@@ -159,7 +159,7 @@
                </footer>
         </section>
 
-        <section data-role="page" id="survey" data-theme="a">
+        <section data-role="page" id="survey" data-theme="a" data-prev="#home" data-next="#sitesPage">
             <header data-role="header" data-position="fixed">
                 <a href="#content" class="sr-only">skip to content</a>
                 <h1>Vermont</h1>
@@ -232,7 +232,7 @@
             </footer>
         </section>
 
-        <section data-role="page" id="submission" data-theme="a">
+        <section data-role="page" id="submission" data-theme="a" data-prev="#home" data-next="">
             <header data-role="header" data-position="fixed">
                 <a href="#content" class="sr-only">skip to content</a>
                 <h1>Vermont</h1>
@@ -258,16 +258,17 @@
             </footer>
         </section>
         <!--This is js modified from HW 3 to allow for some submission validation-->
-        <script
+        <!-- <script
               src="https://code.jquery.com/jquery-3.1.1.min.js"
               integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
               crossorigin="anonymous"></script>
-        <script src="js/custom.js"></script>
+        <script src="js/custom.js"></script> -->
         <!--end js modified from HW 3-->
 
         <!--HW 4-->
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/custom.js"></script>
         <!--HW 4-->
     </body>
 </html>
