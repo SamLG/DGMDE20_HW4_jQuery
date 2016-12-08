@@ -1,0 +1,72 @@
+/*I didn't want to use !important but jQuery Mobile did in their css so in order to override I had to... I did first attempt to have a larger precedence the header items all seemed much too small to be easily read, so I felt it necessary to enlarge the text, likewise much of the form was bolded so that was too thick to be legibile*/
+h1 {
+    font-size: 1.5em !important;
+}
+nav * {
+    font-size: 1em !important;
+}
+form * {
+    /*somehow this does not affect the pop up for the select in the form*/
+    font-weight: normal !important;
+    letter-spacing: 2px;
+}
+.ui-bar {
+    letter-spacing: 2px;
+}
+img {
+    /*will be at width of container*/
+    /*for IE*/
+	width: 100%;
+    /*for most browsers*/
+	max-width: 100%;
+}
+#sitesPage main.ui-grid-a > .ui-block-a {
+    width: 69%;
+    margin-right: 1%;
+}
+#sitesPage main.ui-grid-a > .ui-block-b {
+    width: 30%;
+}
+.custom-corners .ui-bar {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+.custom-corners .ui-body {
+	border-top-width: 0;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+.center {
+    margin: 0 auto;
+    width: 10%;
+}
+@media all and (max-width: 720px) {
+	#oranges .ui-block-a,
+	#oranges .ui-block-b {
+		width: 100%;
+	}
+	.ui-grid-c .ui-block-a,
+	.ui-grid-c .ui-block-b,
+	.ui-grid-c .ui-block-c,
+	.ui-grid-c .ui-block-d {
+		width: 49%;
+		margin-right: 1%;
+	}
+}
+/*screen reader only styling adapted from: http://webaim.org/techniques/css/invisiblecontent/*/
+.sr-only {
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+}
+.sr-only:focus {
+    position:static;
+    width:auto;
+    height:auto;
+    float: right;
+    padding-right: 4em;
+    color: white;
+}
