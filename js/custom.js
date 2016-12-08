@@ -3,9 +3,31 @@
  * interaction, and virtual-barrista
  *
  * @author Sam Grise
- * @version Last modified 11_18_16
+ * @version Last modified 12_8_16
 **/
 $(document).ready(function(){
+
+    $('main').bind('swipeleft', function(event){
+        location.hash = "#" + home;
+		// $('#kitteh').removeClass().addClass('one');
+	}); //end swipe left
+
+	$('main').bind('swiperight', function(event){
+        location.hash = "#" + sitesPage;
+		// $('#kitteh').removeClass().addClass('two');
+	}); //end swipe right
+
+	// $('main').bind('taphold', function(event){
+	// 	$('#kitteh').removeClass().addClass('lots');
+	// }); //end taphold
+    //
+	// $(window).on('orientationchange', function(){
+	// 	if(window.orientation == 0) {
+	// 		$('#kitteh').removeClass().addClass('puppy');
+	// 	} else {
+	// 		$('#kitteh').removeClass().addClass('three');
+	// 	}
+	}); //end orientationchange
 
     //check that all requried fields validate before submission and display error if necessary
     $('#submit-btn').click(function(submit){
