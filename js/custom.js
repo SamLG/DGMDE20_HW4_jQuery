@@ -9,15 +9,11 @@ $(document).ready(function(){
 
     // http://demos.jquerymobile.com/1.3.2/examples/swipe/swipe-page.html
     $( document ).on( "swipeleft", page, function() {
-        if ($.mobile.activePage.data('url')!='http://vermont.samgrise.me/#home') {
-            $.mobile.changePage( "http://vermont.samgrise.me/#home", { transition: "slide" });
-        }
+        $.mobile.changePage( "http://vermont.samgrise.me/#home", { transition: "slide" });
     }); //end swipe left
 
     $( document ).on( "swiperight", page, function() {
-        if ($.mobile.activePage.data('url')!='http://vermont.samgrise.me/#sitesPage'){
             $.mobile.changePage( "http://vermont.samgrise.me/#sitesPage", { transition: "slide" });
-        }
     }); //end swipe right
 
 	// $('main').bind('taphold', function(event){
