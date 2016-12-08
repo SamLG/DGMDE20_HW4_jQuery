@@ -7,17 +7,13 @@
 **/
 $(document).ready(function(){
 
-    $(document).bind('swipeleft', function(event){
-        // location.hash = "home";
-         $.mobile.changePage("home",{transition: "slide"});
-		// $('#kitteh').removeClass().addClass('one');
-	}); //end swipe left
+    $( document ).on( "swipeleft", page, function() {
+            $.mobile.changePage( "http://vermont.samgrise.me/#home", { transition: "slide" });
+        }); //end swipe left
 
-	$(document).bind('swiperight', function(event){
-        // location.hash = "sitesPage";
-        $.mobile.changePage("sitesPage",{transition: "slide"});
-		// $('#kitteh').removeClass().addClass('two');
-	}); //end swipe right
+        $( document ).on( "swiperight", page, function() {
+                $.mobile.changePage( "http://vermont.samgrise.me/#sitesPage", { transition: "slide" });
+        }); //end swipe right
 
 	// $('main').bind('taphold', function(event){
 	// 	$('#kitteh').removeClass().addClass('lots');
