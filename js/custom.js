@@ -31,19 +31,12 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            if($('[data-theme="b"]'){
-                $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
-            }
-            if ($('[data-theme="c"]'){
-                $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
+            $('section[data-theme="b"]').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
+            $('section[data-theme="c"]').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
 		} else {
-            if($('[data-theme="a"]'){
-                $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
-            }
-            if ($('[data-theme="c"]'){
-                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
-            }
+            $('section[data-theme="a"]').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
+            $('section[data-theme="c"]').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
 		}
 	}); //end orientationchange
 
