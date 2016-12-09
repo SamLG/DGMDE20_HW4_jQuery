@@ -45,7 +45,9 @@ footer{
 }
 @media all and (min-width: 480px) and (max-width: 768px) {
     main.ui-grid-a > .ui-block-a,
-    main.ui-grid-a > .ui-block-b, #home .ui-block-a, #home .ui-block-b {
+    main.ui-grid-a > .ui-block-b,
+    #home .ui-grid-a > .ui-block-a,
+    #home .ui-grid-a > .ui-block-b {
         width: 100%;
     }
 	.ui-grid-c .ui-block-a,
