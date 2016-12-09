@@ -158,8 +158,12 @@ button, select option {
     margin-left: 1em;
 }
 @media all and (min-width: 480px) and (max-width: 768px) {
+    #ui main {
+        width: 100%;
+    }
     #ui a {
         width: 100%;
+        float: none;
     }
 
 }
