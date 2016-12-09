@@ -31,27 +31,9 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            // i < 100 gets the bean off the screen
-            for (i=0; i < 100; i++){
-                // $('h2').append('<div class="leaf">*</div>');
-                // var pos = Math.round(Math.random()*40);
-                // var fallPos = '+='.concat(String(pos)).concat('px');
-                // $('.leaf').attr("top", 0).attr("left", fallPos);
-                var elem = document.getElementById("leaf");
-                  var pos = 0;
-                  var id = setInterval(frame, 5);
-                  function frame() {
-                    if (pos == 350) {
-                      clearInterval(id);
-                    } else {
-                      pos++;
-                      elem.style.top = pos + 'px';
-                      elem.style.left = pos + 'px';
-                    }
-                  }
-            }
+            $('main').addClass('red');
 		} else {
-			// $('#kitteh').removeClass().addClass('three');
+            $('main').removeClass('red');
 		}
 	}); //end orientationchange
 
