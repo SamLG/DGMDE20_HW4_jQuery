@@ -37,7 +37,7 @@ $(document).ready(function(){
                 var pos = Math.round(Math.random()*40);
                 var fallPos = '+='.concat(String(pos)).concat('px');
                 $('.leaf').attr("top", 0).attr("left", fallPos);
-                var elem = document.getElementByClass(".lead");
+                var elem = document.getElementByClass(".leaf");
                   var pos = 0;
                   var id = setInterval(frame, 5);
                   function frame() {
