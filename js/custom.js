@@ -31,19 +31,12 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            if($('section').jqmData('data-theme'='b')){
-                $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
-            }
-            if($('section').jqmData('data-theme'='c')){
-                $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
+            $('section').jqmData('data-theme'='b').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
+            $('section').jqmData('data-theme'='c').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
 		} else {
-            if($('section').jqmData('data-theme'='a')){
-                $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
-            }
-            if($('section').jqmData('data-theme'='c')){
-                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
-            }
+            $('section').jqmData('data-theme'='a').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
+            $('section').jqmData('data-theme'='c').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
 		}
 	}); //end orientationchange
 
