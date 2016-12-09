@@ -26,7 +26,15 @@ $(document).ready(function(){
 	});
 
     $('main').bind('taphold', function(event){
-		$('section').removeClass('ui-body-a').addClass('ui-body-c').attr('data-theme','c');
+        if ($('section').hasClass('ui-body-a')){
+		    $('section').removeClass('ui-body-a').addClass('ui-body-c').attr('data-theme','c');
+        }
+        else if ($('section').hasClass('ui-body-b')){
+            $('section').removeClass('ui-body-b').addClass('ui-body-c').attr('data-theme','c');
+        }
+        else {
+            $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
+        }
 	}); //end taphold
     //
     $(window).on('orientationchange', function(){
