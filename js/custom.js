@@ -31,12 +31,19 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            $('section').jqmData('data-theme'='b').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
-            $('section').jqmData('data-theme'='c').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
+            if (('section').hasClass('ui-body-b')){
+                $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
+            }
+            else {
+                $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
 		} else {
-            $('section').jqmData('data-theme'='a').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
-            $('section').jqmData('data-theme'='c').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
+            if(('section').hasClass('ui-body-a')){
+                $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
+            }
+            else {
+                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');                
+            }
 		}
 	}); //end orientationchange
 
