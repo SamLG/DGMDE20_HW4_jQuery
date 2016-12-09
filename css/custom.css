@@ -43,7 +43,7 @@ main.ui-grid-a > .ui-block-b {
 @media all and (min-width: 480px) and (max-width: 768px) {
     main.ui-grid-a > .ui-block-a,
     main.ui-grid-a > .ui-block-b {
-        width: 100% !important;
+        width: 100%;
     }
 	.ui-grid-c .ui-block-a,
 	.ui-grid-c .ui-block-b,
