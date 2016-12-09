@@ -160,6 +160,8 @@ button, select option {
 @media all and (max-width: 768px) {
     #ui main {
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
     #ui a {
         width: 100%;
