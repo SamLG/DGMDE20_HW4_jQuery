@@ -25,15 +25,16 @@ $(document).ready(function(){
             });
 	});
 
-    // $('main').bind('taphold', function(event){
-	// 	$('#kitteh').removeClass().addClass('lots');
-	// }); //end taphold
+    $('main').bind('taphold', function(event){
+		$('section').attr('data-theme','c');
+	}); //end taphold
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            $('main').addClass('red');
+            $('section').attr('data-theme','a');
 		} else {
-            $('main').removeClass('red');
+            $('section').addClass('data-theme','b');
+
 		}
 	}); //end orientationchange
 
