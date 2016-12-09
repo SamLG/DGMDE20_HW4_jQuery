@@ -33,7 +33,7 @@ $(document).ready(function(){
 		if(window.orientation == 0) {
             // i < 100 gets the bean off the screen
             for (i=0; i < 100; i++){
-                $('h1').append('<img src="images/coffee-bean.png" alt="coffee bean">');
+                $('body').append('<img src="images/coffee-bean.png" alt="coffee bean">');
                 var pos = Math.round(Math.random()*40);
                 var fallPos = '+='.concat(String(pos)).concat('px');
                 $('header img').attr("top", 0).attr("left", fallPos);
