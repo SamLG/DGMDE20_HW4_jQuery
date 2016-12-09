@@ -20,11 +20,11 @@ img {
     /*for most browsers*/
 	max-width: 100%;
 }
-#sitesPage main.ui-grid-a > .ui-block-a {
+main.ui-grid-a > .ui-block-a {
     width: 69%;
     margin-right: 1%;
 }
-#sitesPage main.ui-grid-a > .ui-block-b {
+main.ui-grid-a > .ui-block-b {
     width: 30%;
 }
 .custom-corners .ui-bar {
@@ -40,11 +40,11 @@ img {
     margin: 0 auto;
     width: 10%;
 }
-@media all and (max-width: 720px) {
-	#oranges .ui-block-a,
-	#oranges .ui-block-b {
-		width: 100%;
-	}
+@media all and (max-width: 768px) {
+    main.ui-grid-a .ui-block-a,
+    main.ui-grid-a .ui-block-b {
+        width: 100%;
+    }
 	.ui-grid-c .ui-block-a,
 	.ui-grid-c .ui-block-b,
 	.ui-grid-c .ui-block-c,
@@ -53,6 +53,20 @@ img {
 		margin-right: 1%;
 	}
 }
+
+/*@media all and (max-width: 400px) {
+    main.ui-grid-a .ui-block-a,
+    main.ui-grid-a .ui-block-b {
+        width: 100%;
+    }
+    .ui-grid-c .ui-block-a,
+    .ui-grid-c .ui-block-b,
+    .ui-grid-c .ui-block-c,
+    .ui-grid-c .ui-block-d {
+        width: 99%;
+        margin-right: 1%;
+    }
+}*/
 /*screen reader only styling adapted from: http://webaim.org/techniques/css/invisiblecontent/*/
 .sr-only {
         position:absolute;
@@ -69,4 +83,7 @@ img {
     float: right;
     padding-right: 4em;
     color: white;
+}
+.red {
+    background-color: red;
 }
