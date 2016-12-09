@@ -12,28 +12,28 @@ $(document).ready(function(){
         /* Useful sources for creating below functionality
            https://api.jquerymobile.com/pagecontainer/#method-change
            http://stackoverflow.com/questions/23852890/jquery-mobile-swipe-to-navigate-as-single-page-style */
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#sitesPage", {
-                transition: "slide",
+        $( ':mobile-pagecontainer' ).pagecontainer( 'change', '#sitesPage', {
+                transition: 'slide',
             });
 	}); //end swipe left
 
 	$('main').bind('swiperight', function(event){
 		// $('main').removeClass('red');
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#home", {
-                transition: "slide",
+        $( ':mobile-pagecontainer' ).pagecontainer( 'change', '#home', {
+                transition: 'slide',
                 reverse: true
             });
 	});
 
     $('main').bind('taphold', function(event){
-		$('section').removeattr('data-theme','a').attr('data-theme','c');
+		$('section').removeClass('ui-body-a').addClass('ui-body-c').attr('data-theme','c');
 	}); //end taphold
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            $('section')..removeattr('data-theme','a').attr('data-theme','a');
+            $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
 		} else {
-            $('section')..removeattr('data-theme','a').addClass('data-theme','b');
+            $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
 
 		}
 	}); //end orientationchange
