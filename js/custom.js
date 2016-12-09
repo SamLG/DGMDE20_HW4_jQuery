@@ -26,20 +26,20 @@ $(document).ready(function(){
 	});
     var prior = 'a';
     $('main').bind('taphold', function(event){
-        if ($('section header').hasClass('ui-body-a')){
+        if ($('section').hasClass('ui-body-a')){
             prior = 'a';
-		    $('section header').removeClass('ui-body-a').addClass('ui-body-c').attr('data-theme','c');
+		    $('section').removeClass('ui-body-a').addClass('ui-body-c').attr('data-theme','c');
         }
-        else if ($('section header').hasClass('ui-body-b')){
+        else if ($('section').hasClass('ui-body-b')){
             prior = 'b';
-            $('section header').removeClass('ui-body-b').addClass('ui-body-c').attr('data-theme','c');
+            $('section').removeClass('ui-body-b').addClass('ui-body-c').attr('data-theme','c');
         }
         else {
             if (prior == 'a') {
-                $('section header').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
+                $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
             else {
-                $('section header').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
+                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
             }
         }
 	}); //end taphold
