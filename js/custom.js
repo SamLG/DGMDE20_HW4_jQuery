@@ -33,11 +33,11 @@ $(document).ready(function(){
 		if(window.orientation == 0) {
             // i < 100 gets the bean off the screen
             for (i=0; i < 100; i++){
-                $('h2').append('<div class="leaf">*</div>');
+                // $('h2').append('<div class="leaf">*</div>');
                 // var pos = Math.round(Math.random()*40);
                 // var fallPos = '+='.concat(String(pos)).concat('px');
                 // $('.leaf').attr("top", 0).attr("left", fallPos);
-                var elem = document.getElementByClass(".leaf");
+                var elem = document.getElementById("leaf");
                   var pos = 0;
                   var id = setInterval(frame, 5);
                   function frame() {
