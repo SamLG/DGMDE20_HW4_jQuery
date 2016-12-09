@@ -26,14 +26,14 @@ $(document).ready(function(){
 	});
 
     $('main').bind('taphold', function(event){
-		$('section').attr('data-theme','c');
+		$('section').removeattr('data-theme','a').attr('data-theme','c');
 	}); //end taphold
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            $('section').attr('data-theme','a');
+            $('section')..removeattr('data-theme','a').attr('data-theme','a');
 		} else {
-            $('section').addClass('data-theme','b');
+            $('section')..removeattr('data-theme','a').addClass('data-theme','b');
 
 		}
 	}); //end orientationchange
