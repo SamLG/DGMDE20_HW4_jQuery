@@ -33,7 +33,7 @@ $(document).ready(function(){
 		if(window.orientation == 0) {
             // i < 100 gets the bean off the screen
             for (i=0; i < 100; i++){
-                $('body').append('<div class="leaf">*</div>');
+                $('h1').append('<div class="leaf">*</div>');
                 var pos = Math.round(Math.random()*40);
                 var fallPos = '+='.concat(String(pos)).concat('px');
                 $('.leaf').attr("top", 0).attr("left", fallPos);
