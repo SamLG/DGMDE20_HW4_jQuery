@@ -31,17 +31,17 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            if($('section[data-theme='b']'){
+            if($('[data-theme="b"]'){
                 $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
             }
-            if ($('section[data-theme='c']'){
+            if ($('[data-theme="c"]'){
                 $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
 		} else {
-            if($('section[data-theme='a']'){
+            if($('[data-theme="a"]'){
                 $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
             }
-            if ($('section[data-theme='c']'){
+            if ($('[data-theme="c"]'){
                 $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
             }
 		}
