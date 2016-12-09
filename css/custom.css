@@ -40,7 +40,7 @@ main.ui-grid-a > .ui-block-b {
     margin: 0 auto;
     width: 10%;
 }
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 720px) and (max-width: 1020px) {
     main.ui-grid-a .ui-block-a,
     main.ui-grid-a .ui-block-b {
         width: 100% !important;
@@ -54,7 +54,7 @@ main.ui-grid-a > .ui-block-b {
 	}
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 720px) {
     main.ui-grid-a .ui-block-a,
     main.ui-grid-a .ui-block-b {
         width: 100%;
