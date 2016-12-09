@@ -37,12 +37,18 @@ $(document).ready(function(){
                 var pos = Math.round(Math.random()*40);
                 var fallPos = '+='.concat(String(pos)).concat('px');
                 $('.leaf').attr("top", 0).attr("left", fallPos);
-
-                $('.leaf').animate({
-                        bottom: "700px",
-                    }, 100, function() {
-                    // Animation complete
-                });
+                var elem = document.getElementByClass(".lead");
+                  var pos = 0;
+                  var id = setInterval(frame, 5);
+                  function frame() {
+                    if (pos == 350) {
+                      clearInterval(id);
+                    } else {
+                      pos++;
+                      elem.style.top = pos + 'px';
+                      elem.style.left = pos + 'px';
+                    }
+                  }
             }
 		} else {
 			// $('#kitteh').removeClass().addClass('three');
