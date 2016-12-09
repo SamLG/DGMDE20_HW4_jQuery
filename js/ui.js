@@ -47,20 +47,20 @@ $(document).ready(function(){
       var options = {};
       // some effects have required parameters
       if ( selectedEffect === "scale" ) {
-        options = { percent: 50 };
+        options = { percent: 10 };
       } else if ( selectedEffect === "size" ) {
-        options = { to: { width: 200, height: 60 } };
+        options = { to: { width: 100, height: 100 } };
       }
       if ( state ) {
         $( "#effect" ).animate({
           backgroundColor: "#00524d",
           color: "#ffffff",
-        }, 1000 ).toggle( selectedEffect, options, 500 );
+      }, 1000 ).toggle( selectedEffect, options, 1000 );
       } else {
         $( "#effect" ).animate({
           backgroundColor: "#5b2022",
           color: "#ffffff",
-        }, 1000 ).toggle( selectedEffect, options, 500 );
+      }, 1000 ).toggle( selectedEffect, options, 1000 );
       }
       state = !state;
       // Run the effect
