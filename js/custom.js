@@ -31,18 +31,18 @@ $(document).ready(function(){
     //
     $(window).on('orientationchange', function(){
 		if(window.orientation == 0) {
-            if (('section').hasClass('ui-body-b')){
+            if ($('section').hasClass('ui-body-b')){
                 $('section').removeClass('ui-body-b').addClass('ui-body-a').attr('data-theme','a');
             }
             else {
                 $('section').removeClass('ui-body-c').addClass('ui-body-a').attr('data-theme','a');
             }
 		} else {
-            if(('section').hasClass('ui-body-a')){
+            if($('section').hasClass('ui-body-a')){
                 $('section').removeClass('ui-body-a').addClass('ui-body-b').attr('data-theme','b');
             }
             else {
-                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');                
+                $('section').removeClass('ui-body-c').addClass('ui-body-b').attr('data-theme','b');
             }
 		}
 	}); //end orientationchange
