@@ -40,6 +40,9 @@ main.ui-grid-a > .ui-block-b {
     margin: 0 auto;
     width: 10%;
 }
+footer{
+    text-align: center;
+}
 @media all and (min-width: 480px) and (max-width: 768px) {
     main.ui-grid-a > .ui-block-a,
     main.ui-grid-a > .ui-block-b {
@@ -84,6 +87,79 @@ main.ui-grid-a > .ui-block-b {
     padding-right: 4em;
     color: white;
 }
-.red {
-    background-color: red;
+
+/*jQuery UI styles*/
+#container { width: 300px; height: 200px; }
+/*#container h3 { text-align: center; margin: 0; margin-bottom: 10px; }*/
+#resizable { background-position: top left; width: 150px; height: 100px; }
+/*#resizable, #container { padding: 0.5em; }*/
+.ui-resizable-helper { border: 2px dotted #00F; }
+#effect {
+    width: 500px; height: 300px;
+}
+.toggler {
+    width: 500px; height: 300px;
+}
+
+#ui {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#ui header {
+    font-size: larger;
+}
+#ui h1 {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    padding: .7em;
+}
+#ui nav ul{
+    list-style: none;
+    /*width: 100%;*/
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+#ui a {
+    width: 49.8%;
+    margin: 0;
+    padding: .5em;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+}
+#ui main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em;
+}
+#ui section {
+    border: 1px solid grey;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+#ui h2 {
+    margin-bottom: 0;
+}
+#opener {
+    width: 20%;
+    margin: 1em;
+}
+button, select option {
+    margin: 1em;
+    font-size: 1em;
+}
+#ui .ui-icon-home {
+    float: left;
+    background-color: white;
+    margin-top: .2em;
+    margin-left: 1em;
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+    #ui a {
+        width: 100%;
+    }
+
 }
